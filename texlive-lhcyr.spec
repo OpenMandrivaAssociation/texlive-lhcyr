@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/lhcyr
+# catalog-date 2008-04-06 23:48:41 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-lhcyr
 Version:	20080406
 Release:	1
@@ -89,6 +95,7 @@ T2 series of font encodings.
 %doc %{_texmfdistdir}/source/latex/lhcyr/dvidrv.mfj
 %doc %{_texmfdistdir}/source/latex/lhcyr/lhjob.mfj
 %doc %{_texmfdistdir}/source/latex/lhcyr/wcjob.mfj
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -99,3 +106,5 @@ T2 series of font encodings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
