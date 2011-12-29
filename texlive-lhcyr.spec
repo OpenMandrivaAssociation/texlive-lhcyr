@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A collection of three LaTeX 2e styles intended for typesetting
@@ -31,20 +29,12 @@ described as OT1). The way this is done does not match the way
 inputenc would do the job, for output via fontenc to one of the
 T2 series of font encodings.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -96,7 +86,6 @@ T2 series of font encodings.
 %doc %{_texmfdistdir}/source/latex/lhcyr/dvidrv.mfj
 %doc %{_texmfdistdir}/source/latex/lhcyr/lhjob.mfj
 %doc %{_texmfdistdir}/source/latex/lhcyr/wcjob.mfj
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -107,5 +96,3 @@ T2 series of font encodings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
