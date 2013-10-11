@@ -1,12 +1,12 @@
-# revision 15878
+# revision 31795
 # category Package
 # catalog-ctan /macros/latex/contrib/lhcyr
-# catalog-date 2008-04-06 23:48:41 +0200
+# catalog-date 2012-05-22 11:10:15 +0200
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-lhcyr
-Version:	20080406
-Release:	2
+Version:	20120522
+Release:	1
 Summary:	A non-standard Cyrillic input scheme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
@@ -96,17 +96,3 @@ T2 series of font encodings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080406-2
-+ Revision: 753302
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080406-1
-+ Revision: 718853
-- texlive-lhcyr
-- texlive-lhcyr
-- texlive-lhcyr
-- texlive-lhcyr
-
