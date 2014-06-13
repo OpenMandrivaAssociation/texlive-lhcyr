@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-lhcyr
 Version:	20120522
-Release:	5
+Release:	6
 Summary:	A non-standard Cyrillic input scheme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
