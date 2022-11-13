@@ -1,18 +1,12 @@
-# revision 31795
-# category Package
-# catalog-ctan /macros/latex/contrib/lhcyr
-# catalog-date 2012-05-22 11:10:15 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-lhcyr
-Version:	20190228
+Version:	31795
 Release:	1
 Summary:	A non-standard Cyrillic input scheme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ inputenc would do the job, for output via fontenc to one of the
 T2 series of font encodings.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -89,7 +83,7 @@ T2 series of font encodings.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
