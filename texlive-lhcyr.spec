@@ -1,6 +1,6 @@
 Name:		texlive-lhcyr
 Version:	31795
-Release:	1
+Release:	2
 Summary:	A non-standard Cyrillic input scheme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
