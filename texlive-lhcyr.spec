@@ -3,7 +3,7 @@ Version:	31795
 Release:	2
 Summary:	A non-standard Cyrillic input scheme
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/lhcyr
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lhcyr.source.r%{version}.tar.xz
